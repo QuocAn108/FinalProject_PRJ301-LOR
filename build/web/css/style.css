@@ -1,0 +1,203 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 11, 2024, 5:14:31 PM
+    Author     : lienm
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 100px;
+    z-index: 2;
+}
+.carousel-caption h5{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: black;
+    letter-spacing: 2px;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.carousel-caption p{
+    width: 60%;
+    margin: auto;
+    font-size: 30px;
+    line-height: 1.9;
+    text-transform: capitalize;
+}
+.carousel-inner::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.navbar-nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.navbar-light .navbar-brand{
+    color: #000;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.navbar-light .navbar-brand:focus,
+.navbar-light .navbar-brand:hover{
+    color: #000;
+    text-decoration: none;
+}
+.navbar-light .navbar-nav .navbar-link{
+    color: #000;
+}
+/* nav */
+a.nav-link {
+    position: relative;
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a.nav-link:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+a.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: orange;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+}
+li.dropdown-item::after {
+    content: "";
+    position: absolute;
+    background-color: orange;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.3s;
+    list-style: none;
+}
+a.nav-link:hover::after,
+a.nav-link.active:hover::after {
+    width: 100%;
+}
+a.dropdown-item{
+    width: 158px;
+}
+.w-100{
+    height: 100vh;
+}
+.black{
+    color: #000;
+}
+.orange{
+    color: orange;
+    padding-right: 5px;
+}
+.cursor{
+    cursor: pointer;
+}
+.portfolio .card {
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.team .card {
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.services .card-body i {
+    font-size: 50px;
+}
+.team .card-body i {
+    font-size: 20px;
+}
+.hei{
+    height: 462px;
+}
+.section-header h2{
+    margin-top: 10px;
+}
+.clear-fix:after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clear-fix{
+    display: block;
+    clear: both;
+}
+
+.box {
+    position: relative;
+    width: 215px; 
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white; 
+}
+
+.box a {
+    font-size: 50px;
+    z-index: 2;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%; 
+    left: -50%;
+    width: 200%; 
+    height: 200%;
+    border-radius: 50%; 
+    background: linear-gradient(white, black); 
+    animation: rotate 2s linear infinite;
+    z-index: 1;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: white;
+    z-index: 0;
+}
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
